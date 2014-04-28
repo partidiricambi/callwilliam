@@ -3,7 +3,7 @@ var io = require('socket.io'),
   chatter = require('chatter');
 
 var app = connect().use(connect.static('public')).listen(3000);
-var chat_room = io.listen(app);
+var chat_room = io.listen(process.env.PORT || 3000);
 
 chatter.set_sockets(chat_room.sockets);
 
