@@ -6,7 +6,7 @@ var app = connect().use(connect.static('public')).listen(process.env.PORT || 500
 
 var port = listen(process.env.PORT || 5000);
 app.listen(port, function() {
-  console.log("Listening on " + port);
+  console.log("Express server listening on port %d in %s mode", app.address().port, app.settings.env);
 });
 
 var chat_room = io.listen(app);
