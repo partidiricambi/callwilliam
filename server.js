@@ -3,6 +3,12 @@ var io = require('socket.io'),
   chatter = require('chatter');
 
 var app = connect().use(connect.static('public')).listen(process.env.PORT || 5000);
+
+var port = listen(process.env.PORT || 5000);
+app.listen(port, function() {
+  console.log("Listening on " + port);
+});
+
 var chat_room = io.listen(app);
 
 chatter.set_sockets(chat_room.sockets);
@@ -13,3 +19,5 @@ chat_room.sockets.on('connection', function (socket) {
     username: socket.id
   });
 });
+
+
