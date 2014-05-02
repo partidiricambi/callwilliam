@@ -1,16 +1,15 @@
+
 {
-  "name": "callWilliam",
-  "version": "0.0.0",
-  "description": "Interective with the mechanic",
-  "main": "index.js",
+  "name": "mechanichat",
+  "version": "0.0.1",
+  "private": true,
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node app.js"
   },
   "dependencies": {
-    "socket.io": "0.9.6",
+    "socket.io": "latest",
+    "express": "3.3.5",
     "connect": "1.9.2"
-  },
-  
-  "author": "Dieudonne Kawayida",
-  "license": "ISC"
+   
+  }
 }
